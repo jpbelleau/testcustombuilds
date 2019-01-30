@@ -1,1 +1,1 @@
-BLAH
+FROM centos:7
