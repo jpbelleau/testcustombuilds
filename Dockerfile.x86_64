@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER "DCI"
 
-RUN /bin/sh -c INSTALL_PKGS="httpd" && yum install -y $INSTALL_PKGS && rpm -V $INSTALL_PKGS && yum clean all
+RUN INSTALL_PKGS="httpd" && yum install -y $INSTALL_PKGS && rpm -V $INSTALL_PKGS && yum clean all
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
